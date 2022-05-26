@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="171" id="KH0-Is-bOU" customClass="SearchResultCell" customModule="Stocks" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KH0-Is-bOU" id="ssc-m0-4Pf">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akc-N0-owz">
+                        <rect key="frame" x="84" y="16" width="39.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qup-J8-WJb">
+                        <rect key="frame" x="84" y="41.5" width="28.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" translatesAutoresizingMaskIntoConstraints="NO" id="GmT-90-SFl">
+                        <rect key="frame" x="16" y="10" width="60" height="60"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Whc-fC-jjo"/>
+                            <constraint firstAttribute="height" constant="60" id="sDE-BI-NGz"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="GmT-90-SFl" firstAttribute="leading" secondItem="ssc-m0-4Pf" secondAttribute="leading" constant="16" id="BgY-pk-oC7"/>
+                    <constraint firstItem="GmT-90-SFl" firstAttribute="leading" secondItem="ssc-m0-4Pf" secondAttribute="leading" constant="16" id="NHU-FV-4sW"/>
+                    <constraint firstItem="GmT-90-SFl" firstAttribute="top" secondItem="ssc-m0-4Pf" secondAttribute="top" constant="10" id="Q1F-t9-F7f"/>
+                    <constraint firstItem="akc-N0-owz" firstAttribute="leading" secondItem="GmT-90-SFl" secondAttribute="trailing" constant="8" symbolic="YES" id="RtN-99-v23"/>
+                    <constraint firstItem="qup-J8-WJb" firstAttribute="leading" secondItem="GmT-90-SFl" secondAttribute="trailing" constant="8" symbolic="YES" id="Tuh-ZQ-rWz"/>
+                    <constraint firstItem="GmT-90-SFl" firstAttribute="top" secondItem="ssc-m0-4Pf" secondAttribute="top" constant="10" id="Xh4-LK-Xif"/>
+                    <constraint firstItem="GmT-90-SFl" firstAttribute="leading" secondItem="ssc-m0-4Pf" secondAttribute="leading" constant="16" id="bW9-g7-nq4"/>
+                    <constraint firstAttribute="bottom" secondItem="qup-J8-WJb" secondAttribute="bottom" constant="18" id="j3G-85-o7T"/>
+                    <constraint firstItem="akc-N0-owz" firstAttribute="top" secondItem="ssc-m0-4Pf" secondAttribute="top" constant="16" id="nUg-Oa-c3x"/>
+                    <constraint firstItem="GmT-90-SFl" firstAttribute="top" secondItem="ssc-m0-4Pf" secondAttribute="top" constant="10" id="rFE-dw-til"/>
+                    <constraint firstItem="qup-J8-WJb" firstAttribute="top" secondItem="akc-N0-owz" secondAttribute="bottom" constant="7.5" id="u5a-ls-TcS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="articleImageView" destination="GmT-90-SFl" id="uIx-ak-qav"/>
+                <outlet property="subtitleLabel" destination="qup-J8-WJb" id="hwZ-Ko-fy3"/>
+                <outlet property="titleLabel" destination="akc-N0-owz" id="Xmm-CO-fUg"/>
+            </connections>
+            <point key="canvasLocation" x="219.56521739130437" y="103.45982142857143"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="square" width="128" height="128"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
