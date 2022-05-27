@@ -1,9 +1,3 @@
-//
-//  StockResultViewCell.swift
-//  Stocks
-//
-//  Created by Ismail Tazzit on 5/21/22.
-//
 
 import UIKit
 
