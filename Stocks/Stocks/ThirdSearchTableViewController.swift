@@ -1,5 +1,5 @@
-
 import UIKit
+import CoreData
 
 class ThirdSearchTableViewController: UITableViewController, addstockiewControllerDelegate, UINavigationControllerDelegate {
     
@@ -7,6 +7,7 @@ class ThirdSearchTableViewController: UITableViewController, addstockiewControll
         navigationController?.popViewController(animated: true)
     }
     var controller : StockResultCell = StockResultCell()
+    var manageObjectContext: NSManagedObjectContext!
     
     func addStockViewController(_ controller: AddStockViewController, didFinishAdding item: Stockitem) {
         let newRowIndex = Stocksitem.count
@@ -17,6 +18,7 @@ class ThirdSearchTableViewController: UITableViewController, addstockiewControll
         navigationController?.popViewController(animated: true)
         saveStocksItems()
     }
+    
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         if viewController === self {
             UserDefaults.standard.set(-1, forKey: "StocksIndex")
@@ -24,12 +26,14 @@ class ThirdSearchTableViewController: UITableViewController, addstockiewControll
     }
     
     var Stocksitem = [Stockitem]()
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
         if segue.identifier == "AddStock"{
             
             let controller = segue.destination as! AddStockViewController
             controller.delegate = self
+            controller.manageObjectContext = manageObjectContext
             
         }
         else if segue.identifier == "Viewquote" {
@@ -57,7 +61,6 @@ class ThirdSearchTableViewController: UITableViewController, addstockiewControll
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return Stocksitem.count
     }
 
@@ -68,15 +71,11 @@ class ThirdSearchTableViewController: UITableViewController, addstockiewControll
         let item = Stocksitem[indexPath.row]
         cell.symboLabel.text = item.symbol
         cell.closeLabel.text = item.close
-        //cell.textLabel!.text = item.symbol
-        //cell.detailTextLabel?.text = item.close
-        
-        
-
-        
 
         return cell
     }
+    
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         Stocksitem.remove(at: indexPath.row)
         
@@ -85,10 +84,9 @@ class ThirdSearchTableViewController: UITableViewController, addstockiewControll
         saveStocksItems()
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //UserDefaults.standard.set(indexPath.row, forKey: "StocksIndex")
+        UserDefaults.standard.set(indexPath.row, forKey: "StocksIndex")
        
         tableView.deselectRow(at: indexPath, animated: true)
-        //To perform segue, it only shows the add item screen and does not pass the values. 
         performSegue(withIdentifier: "Viewquote", sender: indexPath)
         
     }
@@ -110,6 +108,7 @@ class ThirdSearchTableViewController: UITableViewController, addstockiewControll
             print("Error encoding Stocksitem array : \(error.localizedDescription)")
         }
     }
+    
     func loadStocksItems() {
         let path = dataFilePath()
         if let data = try? Data(contentsOf: path){

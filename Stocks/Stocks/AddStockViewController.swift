@@ -1,6 +1,8 @@
 
 import UIKit
 import AVFoundation
+import CoreData
+
 protocol addstockiewControllerDelegate: class {
     func addstockViewControllerDidCancel(
         _ controller: AddStockViewController)
@@ -10,6 +12,9 @@ protocol addstockiewControllerDelegate: class {
 }
 
 class AddStockViewController: UITableViewController{
+    
+    var manageObjectContext: NSManagedObjectContext!
+    
     var audioPlayer: AVAudioPlayer?
     weak var delegate: addstockiewControllerDelegate?
     var itemToView: Stockitem?
@@ -107,10 +112,34 @@ class AddStockViewController: UITableViewController{
         let pathToSound = Bundle.main.path(forResource: "clean-fast-swooshaiff-14784", ofType: "wav")!
         let url = URL(fileURLWithPath: pathToSound)
         do {
+            try AVAudioSession.sharedInstance().setMode(.default)
+            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
             audioPlayer = try AVAudioPlayer(contentsOf: url)
+            
+            audioPlayer?.play()
         }
         catch {
-            print(error.localizedDescription)
+            print("COULDNT PLAY SOUND: \(error.localizedDescription)")
+        }
+        
+        //MARK: Core Data
+        let stock = StocksCoreData(context: manageObjectContext)
+        stock.low = item.low
+        stock.close = item.close
+        stock.open = item.open
+        stock.afterHours = item.afterHours
+        stock.preMarket = item.preMarket
+        stock.volume = item.volume
+        stock.high = item.high
+        stock.symbol = item.symbol
+        stock.from = item.from
+        stock.status = item.status
+        do {
+            try manageObjectContext.save()
+        }
+        catch{
+            fatalError("Error: \(error)")
+            
         }
         
         
@@ -133,6 +162,18 @@ class AddStockViewController: UITableViewController{
             return try Data(contentsOf: url)
         } catch {
             print("Downloaded error: \(error.localizedDescription)")
+            let pathToSound = Bundle.main.path(forResource: "stop-13692", ofType: "mp3")!
+            let url = URL(fileURLWithPath: pathToSound)
+            do {
+                try AVAudioSession.sharedInstance().setMode(.default)
+                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                
+                audioPlayer?.play()
+            }
+            catch {
+                print("COULDNT PLAY SOUND: \(error.localizedDescription)")
+            }
             showNetworkerror()
             doneBarButton.isEnabled = false
             return nil
