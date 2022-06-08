@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,14 +16,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akc-N0-owz">
-                        <rect key="frame" x="84" y="16" width="39.5" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akc-N0-owz">
+                        <rect key="frame" x="84" y="16" width="275" height="19.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qup-J8-WJb">
-                        <rect key="frame" x="84" y="41.5" width="28.5" height="20.5"/>
+                        <rect key="frame" x="84" y="44" width="275" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -32,23 +32,21 @@
                         <rect key="frame" x="16" y="10" width="60" height="60"/>
                         <color key="backgroundColor" systemColor="linkColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="Whc-fC-jjo"/>
-                            <constraint firstAttribute="height" constant="60" id="sDE-BI-NGz"/>
+                            <constraint firstAttribute="height" constant="60" id="5XA-Ch-5Of"/>
+                            <constraint firstAttribute="width" constant="60" id="rpI-s7-MIm"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="GmT-90-SFl" firstAttribute="leading" secondItem="ssc-m0-4Pf" secondAttribute="leading" constant="16" id="BgY-pk-oC7"/>
-                    <constraint firstItem="GmT-90-SFl" firstAttribute="leading" secondItem="ssc-m0-4Pf" secondAttribute="leading" constant="16" id="NHU-FV-4sW"/>
-                    <constraint firstItem="GmT-90-SFl" firstAttribute="top" secondItem="ssc-m0-4Pf" secondAttribute="top" constant="10" id="Q1F-t9-F7f"/>
-                    <constraint firstItem="akc-N0-owz" firstAttribute="leading" secondItem="GmT-90-SFl" secondAttribute="trailing" constant="8" symbolic="YES" id="RtN-99-v23"/>
-                    <constraint firstItem="qup-J8-WJb" firstAttribute="leading" secondItem="GmT-90-SFl" secondAttribute="trailing" constant="8" symbolic="YES" id="Tuh-ZQ-rWz"/>
-                    <constraint firstItem="GmT-90-SFl" firstAttribute="top" secondItem="ssc-m0-4Pf" secondAttribute="top" constant="10" id="Xh4-LK-Xif"/>
-                    <constraint firstItem="GmT-90-SFl" firstAttribute="leading" secondItem="ssc-m0-4Pf" secondAttribute="leading" constant="16" id="bW9-g7-nq4"/>
-                    <constraint firstAttribute="bottom" secondItem="qup-J8-WJb" secondAttribute="bottom" constant="18" id="j3G-85-o7T"/>
-                    <constraint firstItem="akc-N0-owz" firstAttribute="top" secondItem="ssc-m0-4Pf" secondAttribute="top" constant="16" id="nUg-Oa-c3x"/>
-                    <constraint firstItem="GmT-90-SFl" firstAttribute="top" secondItem="ssc-m0-4Pf" secondAttribute="top" constant="10" id="rFE-dw-til"/>
-                    <constraint firstItem="qup-J8-WJb" firstAttribute="top" secondItem="akc-N0-owz" secondAttribute="bottom" constant="7.5" id="u5a-ls-TcS"/>
+                    <constraint firstAttribute="trailing" secondItem="akc-N0-owz" secondAttribute="trailing" constant="16" id="N0G-ej-Ift"/>
+                    <constraint firstAttribute="bottom" secondItem="qup-J8-WJb" secondAttribute="bottom" constant="18" id="QdR-3D-wIe"/>
+                    <constraint firstItem="GmT-90-SFl" firstAttribute="leading" secondItem="ssc-m0-4Pf" secondAttribute="leading" constant="16" id="Sb3-tc-8Fa"/>
+                    <constraint firstItem="akc-N0-owz" firstAttribute="top" secondItem="ssc-m0-4Pf" secondAttribute="top" constant="16" id="Wia-i9-JvG"/>
+                    <constraint firstItem="akc-N0-owz" firstAttribute="leading" secondItem="GmT-90-SFl" secondAttribute="trailing" constant="8" id="Z2f-nN-2aA"/>
+                    <constraint firstItem="GmT-90-SFl" firstAttribute="top" secondItem="ssc-m0-4Pf" secondAttribute="top" constant="10" id="m0v-32-MQy"/>
+                    <constraint firstAttribute="trailing" secondItem="qup-J8-WJb" secondAttribute="trailing" constant="16" id="oLr-RN-bZF"/>
+                    <constraint firstItem="qup-J8-WJb" firstAttribute="leading" secondItem="GmT-90-SFl" secondAttribute="trailing" constant="8" id="und-Dd-SAt"/>
+                    <constraint firstItem="qup-J8-WJb" firstAttribute="top" secondItem="akc-N0-owz" secondAttribute="bottom" constant="8" id="yYe-vU-0c5"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

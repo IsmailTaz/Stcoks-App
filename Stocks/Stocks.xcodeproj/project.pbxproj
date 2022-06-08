@@ -13,6 +13,8 @@
 		BB1E093E281E5BE2007E4A0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB1E093D281E5BE2007E4A0B /* Assets.xcassets */; };
 		BB1E0941281E5BE3007E4A0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1E093F281E5BE3007E4A0B /* LaunchScreen.storyboard */; };
 		BB1E09532832FD68007E4A0B /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E09522832FD66007E4A0B /* SearchResults.swift */; };
+		BB1FCD7D2850744E00BBE3E1 /* StockResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1FCD7C2850744E00BBE3E1 /* StockResultCell.xib */; };
+		BB1FCD7F2850777300BBE3E1 /* StockResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1FCD7E2850777300BBE3E1 /* StockResultCell.swift */; };
 		BBA74CD428334EB700086BAD /* Stockitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA74CD328334EB700086BAD /* Stockitem.swift */; };
 		BBA74CD628341C3E00086BAD /* ThirdSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA74CD528341C3E00086BAD /* ThirdSearchTableViewController.swift */; };
 		BBA74CD82834402700086BAD /* AddStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA74CD72834402700086BAD /* AddStockViewController.swift */; };
@@ -22,9 +24,6 @@
 		BBB257602836D02700A222C9 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB2575F2836D02700A222C9 /* SearchResultCell.swift */; };
 		BBB257642837083300A222C9 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB257632837083300A222C9 /* UIImageView+DownloadImage.swift */; };
 		BBB2576E2839001300A222C9 /* StockResultViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB2576D2839001300A222C9 /* StockResultViewCell.swift */; };
-		BBB257702839008E00A222C9 /* StockResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBB2576F2839008E00A222C9 /* StockResultCell.xib */; };
-		BBB25772283900A100A222C9 /* StockResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB25771283900A000A222C9 /* StockResultCell.swift */; };
-		BBB25774283988E800A222C9 /* sentmessage_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BBB25773283988E100A222C9 /* sentmessage_1.mp3 */; };
 		BBCC1522283BDB5600F3627C /* clean-fast-swooshaiff-14784.wav in Resources */ = {isa = PBXBuildFile; fileRef = BBCC1521283BDB5600F3627C /* clean-fast-swooshaiff-14784.wav */; };
 		BBEB76DE2850206000DA5D26 /* Stocks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBEB76DC2850205F00DA5D26 /* Stocks.xcdatamodeld */; };
 		BBEB76E12850295B00DA5D26 /* StocksCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEB76DF2850295A00DA5D26 /* StocksCoreData+CoreDataClass.swift */; };
@@ -41,6 +40,8 @@
 		BB1E0940281E5BE3007E4A0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB1E0942281E5BE3007E4A0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB1E09522832FD66007E4A0B /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		BB1FCD7C2850744E00BBE3E1 /* StockResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockResultCell.xib; sourceTree = "<group>"; };
+		BB1FCD7E2850777300BBE3E1 /* StockResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockResultCell.swift; sourceTree = "<group>"; };
 		BBA74CD328334EB700086BAD /* Stockitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stockitem.swift; sourceTree = "<group>"; };
 		BBA74CD528341C3E00086BAD /* ThirdSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdSearchTableViewController.swift; sourceTree = "<group>"; };
 		BBA74CD72834402700086BAD /* AddStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStockViewController.swift; sourceTree = "<group>"; };
@@ -50,9 +51,6 @@
 		BBB2575F2836D02700A222C9 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		BBB257632837083300A222C9 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		BBB2576D2839001300A222C9 /* StockResultViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockResultViewCell.swift; sourceTree = "<group>"; };
-		BBB2576F2839008E00A222C9 /* StockResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StockResultCell.xib; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/StockResultCell.xib"; sourceTree = "<group>"; };
-		BBB25771283900A000A222C9 /* StockResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StockResultCell.swift; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/StockResultCell.swift"; sourceTree = "<group>"; };
-		BBB25773283988E100A222C9 /* sentmessage_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sentmessage_1.mp3; path = /Users/ismailtazzit/Desktop/UIKIT/Stocks/Stocks/sentmessage_1.mp3; sourceTree = "<absolute>"; };
 		BBCC1521283BDB5600F3627C /* clean-fast-swooshaiff-14784.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "clean-fast-swooshaiff-14784.wav"; sourceTree = "<group>"; };
 		BBEB76DD2850205F00DA5D26 /* Stocks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Stocks.xcdatamodel; sourceTree = "<group>"; };
 		BBEB76DF2850295A00DA5D26 /* StocksCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StocksCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -109,11 +107,10 @@
 				BBB2575F2836D02700A222C9 /* SearchResultCell.swift */,
 				BBB257632837083300A222C9 /* UIImageView+DownloadImage.swift */,
 				BBB2576D2839001300A222C9 /* StockResultViewCell.swift */,
-				BBB2576F2839008E00A222C9 /* StockResultCell.xib */,
-				BBB25771283900A000A222C9 /* StockResultCell.swift */,
-				BBB25773283988E100A222C9 /* sentmessage_1.mp3 */,
 				BBCC1521283BDB5600F3627C /* clean-fast-swooshaiff-14784.wav */,
 				BBEB76E328506AA700DA5D26 /* stop-13692.mp3 */,
+				BB1FCD7C2850744E00BBE3E1 /* StockResultCell.xib */,
+				BB1FCD7E2850777300BBE3E1 /* StockResultCell.swift */,
 			);
 			path = Stocks;
 			sourceTree = "<group>";
@@ -176,14 +173,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBB25774283988E800A222C9 /* sentmessage_1.mp3 in Resources */,
 				BB1E0941281E5BE3007E4A0B /* LaunchScreen.storyboard in Resources */,
+				BB1FCD7D2850744E00BBE3E1 /* StockResultCell.xib in Resources */,
 				BB1E093E281E5BE2007E4A0B /* Assets.xcassets in Resources */,
 				BBB2575E2836CBE300A222C9 /* SearchResultCell.xib in Resources */,
 				BBEB76E428506AA800DA5D26 /* stop-13692.mp3 in Resources */,
 				BBCC1522283BDB5600F3627C /* clean-fast-swooshaiff-14784.wav in Resources */,
 				BB1E093C281E5BAA007E4A0B /* Main.storyboard in Resources */,
-				BBB257702839008E00A222C9 /* StockResultCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,8 +196,8 @@
 				BBEB76E22850295B00DA5D26 /* StocksCoreData+CoreDataProperties.swift in Sources */,
 				BBEB76E12850295B00DA5D26 /* StocksCoreData+CoreDataClass.swift in Sources */,
 				BBB2575C2836C5CE00A222C9 /* SearchNewsViewController.swift in Sources */,
+				BB1FCD7F2850777300BBE3E1 /* StockResultCell.swift in Sources */,
 				BB1E09532832FD68007E4A0B /* SearchResults.swift in Sources */,
-				BBB25772283900A100A222C9 /* StockResultCell.swift in Sources */,
 				BBA74CD428334EB700086BAD /* Stockitem.swift in Sources */,
 				BBB257642837083300A222C9 /* UIImageView+DownloadImage.swift in Sources */,
 				BBB2576E2839001300A222C9 /* StockResultViewCell.swift in Sources */,
