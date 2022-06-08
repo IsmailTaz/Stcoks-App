@@ -7,6 +7,7 @@ class SearchNewsViewController: UIViewController {
         struct CellIdentifiers {
             static let searchResultCell = "SearchResultCell"
             static let nothingFond = "NothingFoundCell"
+            static let loadingCell = "LoadingCell"
         }
     }
     override func viewDidLoad() {
@@ -18,7 +19,15 @@ class SearchNewsViewController: UIViewController {
         let cellNib = UINib(nibName: TableView.CellIdentifiers.searchResultCell, bundle: nil)
         
         tableView.register(cellNib, forCellReuseIdentifier: TableView.CellIdentifiers.searchResultCell)
+        
+        let CellNib = UINib(nibName: TableView.CellIdentifiers.loadingCell, bundle: nil)
+        
+        tableView.register(CellNib, forCellReuseIdentifier: TableView.CellIdentifiers.loadingCell)
+        
     }
+    var isLoading = false
+    
+    
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
     func showNetworkerror() {
@@ -71,6 +80,7 @@ extension SearchNewsViewController: UISearchBarDelegate{
         print(searchBar.text!)
         
         if !searchBar.text!.isEmpty {
+            self.isLoading = true
             let url = stocksearch(searchText: searchBar.text!)
             let session = URLSession.shared
             let dataTask = session.dataTask(with: url) {data, response, error in
@@ -81,6 +91,7 @@ extension SearchNewsViewController: UISearchBarDelegate{
                     if let data = data {
                         self.searchresults = self.parse(data: data)
                         DispatchQueue.main.async {
+                            self.isLoading = false
                             self.tableView.reloadData()
                         }
                         return
@@ -90,6 +101,7 @@ extension SearchNewsViewController: UISearchBarDelegate{
                     print("Failure! \(response!)")
                 }
                 DispatchQueue.main.async {
+                    self.isLoading = false
                     self.tableView.reloadData()
                     self.showNetworkerror()
                 }
@@ -104,11 +116,25 @@ extension SearchNewsViewController: UISearchBarDelegate{
 //MARK: tableview delegates
 extension SearchNewsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isLoading{
+            return 1
+        }
+        
+        else {
         return searchresults.count
+        }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = TableView.CellIdentifiers.searchResultCell
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! SearchResultCell
+        if isLoading {
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.loadingCell, for: indexPath)
+            let spinner = cell.viewWithTag(100) as! UIActivityIndicatorView
+            spinner.startAnimating()
+            return cell
+            
+        }else
+        
         if searchresults.count == 0 {
             cell.titleLabel.text = "(NOThing found)"
             cell.subtitleLabel.text = ""
@@ -129,6 +155,14 @@ extension SearchNewsViewController: UITableViewDelegate, UITableViewDataSource {
         }
         let vc = SFSafariViewController(url: url)
         present(vc, animated: true)
+    }
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if searchresults.count == 0 || isLoading {
+            return nil
+        }
+        else {
+            return indexPath
+        }
     }
     
 }

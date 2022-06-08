@@ -17,6 +17,8 @@ class ThirdSearchTableViewController: UITableViewController, addstockiewControll
         tableView.insertRows(at: indexPaths, with: .automatic)
         navigationController?.popViewController(animated: true)
         saveStocksItems()
+        
+        //UserDefaults.setValue(item.close, forKey: "StocksIndex")
     }
     
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
@@ -26,6 +28,8 @@ class ThirdSearchTableViewController: UITableViewController, addstockiewControll
     }
     
     var Stocksitem = [Stockitem]()
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
@@ -41,8 +45,20 @@ class ThirdSearchTableViewController: UITableViewController, addstockiewControll
             controller.delegate = self
             let indexPath = sender as! IndexPath
             controller.itemToView = Stocksitem[indexPath.row]
+            controller.manageObjectContext = manageObjectContext
             }
         }
+    //MARK: Crashes the app
+    /*
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let index = UserDefaults.standard.integer(forKey: "StocksIndex")
+        if index != -1 {
+            let quote = Stocksitem[index]
+            performSegue(withIdentifier: "Viewquote", sender: quote)
+        }
+    }
+     */
     
 
     override func viewDidLoad() {
@@ -71,6 +87,7 @@ class ThirdSearchTableViewController: UITableViewController, addstockiewControll
         let item = Stocksitem[indexPath.row]
         cell.symboLabel.text = item.symbol
         cell.closeLabel.text = item.close
+        
 
         return cell
     }
@@ -82,9 +99,11 @@ class ThirdSearchTableViewController: UITableViewController, addstockiewControll
         let indexPaths = [indexPath]
         tableView.deleteRows(at: indexPaths, with: .automatic)
         saveStocksItems()
+       // UserDefaults.setValue(indexPath.row, forKey: "Stock")
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         UserDefaults.standard.set(indexPath.row, forKey: "StocksIndex")
+        
        
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "Viewquote", sender: indexPath)
@@ -121,6 +140,7 @@ class ThirdSearchTableViewController: UITableViewController, addstockiewControll
             }
         }
     }
+     
 
     
 

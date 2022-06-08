@@ -15,6 +15,8 @@
 		BB1E09532832FD68007E4A0B /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E09522832FD66007E4A0B /* SearchResults.swift */; };
 		BB1FCD7D2850744E00BBE3E1 /* StockResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1FCD7C2850744E00BBE3E1 /* StockResultCell.xib */; };
 		BB1FCD7F2850777300BBE3E1 /* StockResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1FCD7E2850777300BBE3E1 /* StockResultCell.swift */; };
+		BB1FCD812851307000BBE3E1 /* StocksItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1FCD802851306F00BBE3E1 /* StocksItems.swift */; };
+		BB1FCD832851433300BBE3E1 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1FCD822851433300BBE3E1 /* LoadingCell.xib */; };
 		BBA74CD428334EB700086BAD /* Stockitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA74CD328334EB700086BAD /* Stockitem.swift */; };
 		BBA74CD628341C3E00086BAD /* ThirdSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA74CD528341C3E00086BAD /* ThirdSearchTableViewController.swift */; };
 		BBA74CD82834402700086BAD /* AddStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA74CD72834402700086BAD /* AddStockViewController.swift */; };
@@ -42,6 +44,8 @@
 		BB1E09522832FD66007E4A0B /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		BB1FCD7C2850744E00BBE3E1 /* StockResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockResultCell.xib; sourceTree = "<group>"; };
 		BB1FCD7E2850777300BBE3E1 /* StockResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockResultCell.swift; sourceTree = "<group>"; };
+		BB1FCD802851306F00BBE3E1 /* StocksItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksItems.swift; sourceTree = "<group>"; };
+		BB1FCD822851433300BBE3E1 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		BBA74CD328334EB700086BAD /* Stockitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stockitem.swift; sourceTree = "<group>"; };
 		BBA74CD528341C3E00086BAD /* ThirdSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdSearchTableViewController.swift; sourceTree = "<group>"; };
 		BBA74CD72834402700086BAD /* AddStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStockViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				BBEB76E328506AA700DA5D26 /* stop-13692.mp3 */,
 				BB1FCD7C2850744E00BBE3E1 /* StockResultCell.xib */,
 				BB1FCD7E2850777300BBE3E1 /* StockResultCell.swift */,
+				BB1FCD802851306F00BBE3E1 /* StocksItems.swift */,
+				BB1FCD822851433300BBE3E1 /* LoadingCell.xib */,
 			);
 			path = Stocks;
 			sourceTree = "<group>";
@@ -179,6 +185,7 @@
 				BBB2575E2836CBE300A222C9 /* SearchResultCell.xib in Resources */,
 				BBEB76E428506AA800DA5D26 /* stop-13692.mp3 in Resources */,
 				BBCC1522283BDB5600F3627C /* clean-fast-swooshaiff-14784.wav in Resources */,
+				BB1FCD832851433300BBE3E1 /* LoadingCell.xib in Resources */,
 				BB1E093C281E5BAA007E4A0B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +202,7 @@
 				BBA74CD82834402700086BAD /* AddStockViewController.swift in Sources */,
 				BBEB76E22850295B00DA5D26 /* StocksCoreData+CoreDataProperties.swift in Sources */,
 				BBEB76E12850295B00DA5D26 /* StocksCoreData+CoreDataClass.swift in Sources */,
+				BB1FCD812851307000BBE3E1 /* StocksItems.swift in Sources */,
 				BBB2575C2836C5CE00A222C9 /* SearchNewsViewController.swift in Sources */,
 				BB1FCD7F2850777300BBE3E1 /* StockResultCell.swift in Sources */,
 				BB1E09532832FD68007E4A0B /* SearchResults.swift in Sources */,
